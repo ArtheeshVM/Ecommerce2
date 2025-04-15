@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom'
 const Item = (props) => {
   return (
     <div className='item'>
-        <Link to={`https://github.com/ArtheeshVM/Ecommerce2/blob/main/frontend/src/Components/Assets/product_${props.id}`}><img onClick={window.scrollTo(0,0)} src={props.image} alt="" /></Link>
-        {/* <Link to={`/product/${props.id}`}><img onClick={window.scrollTo(0,0)} src={props.image} alt="" /></Link> */}
+        <Link to={`https://backend-vtav.onrender.com/product/${props.id}`}><img onClick={window.scrollTo(0,0)} src={props.image} alt="Image" /></Link>
         <p>{props.name}</p>
         <div className="item-prices">
             <div className="item-price-new">
