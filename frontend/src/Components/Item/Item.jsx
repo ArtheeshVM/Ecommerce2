@@ -1,6 +1,7 @@
 import React from "react";
 import "./Item.css";
 import { Link } from "react-router-dom";
+import storage from '../../../../backend/index';
 
 const Item = (props) => {
   return (
@@ -10,7 +11,7 @@ const Item = (props) => {
       <Link to={`/product/${props.id}`}>
         <img
           onClick={window.scrollTo(0, 0)}
-          src={`https://backend-vtav.onrender.com/images/product_${props.id}.png`}
+          src={`https://backend-vtav.onrender.com/images/${storage.filename}`}
           alt="Product"
         />
       </Link>
