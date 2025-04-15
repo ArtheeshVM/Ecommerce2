@@ -10,8 +10,8 @@ const Item = (props) => {
       <Link to={`/product/${props.id}`}>
         <img
           onClick={window.scrollTo(0, 0)}
-          src="https://backend-vtav.onrender.com/images/product_{$props.id}.png"
-          alt="Nothing..."
+          src={`https://backend-vtav.onrender.com/images/product_${props.id}.png`}
+          alt="Product"
         />
       </Link>
       <p>{props.name}</p>
