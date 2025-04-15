@@ -29,7 +29,7 @@ const AddProduct = () => {
         let formData = new FormData();
         formData.append('product',image);
 
-        await fetch('http://localhost:4000/upload',{
+        await fetch('https://backend-vtav.onrender.com/upload',{
             method:'POST',
             headers:{
                 Accept:'application/json',
@@ -40,7 +40,7 @@ const AddProduct = () => {
         if(responseData.success){
             product.image=responseData.image_url;
             console.log(product);
-            await fetch('http://localhost:4000/addproduct',{
+            await fetch('https://backend-vtav.onrender.com/addproduct',{
                 method:'POST',
                 headers:{
                     Accept:'application/json',
@@ -121,7 +121,7 @@ export default AddProduct
 //     formData.append('product', image);
 
 //     // Upload image first
-//     await fetch('http://localhost:4000/upload', {
+//     await fetch('https://backend-vtav.onrender.com/upload', {
 //       method: 'POST',
 //       body: formData,
 //     })
@@ -140,7 +140,7 @@ export default AddProduct
 
 //       console.log("Final product to be sent:", product);
 
-//       await fetch('http://localhost:4000/addproduct', {
+//       await fetch('https://backend-vtav.onrender.com/addproduct', {
 //         method: 'POST',
 //         headers: {
 //           'Content-Type': 'application/json',
